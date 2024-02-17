@@ -1,10 +1,11 @@
 import React from "react";
-import '../style/BorrowBook_style.css';
+import { Link } from "react-router-dom"; 
+import '../../style/BorrowBookStyle/BorrowBook_style.css'
 
 export default function BorrowBook_main() {
   const books = [
     {
-        id: 'B0004',
+        id: 'B0001',
         title: "เจ้าชายน้อย",
         borrower: "สมรักษ์ สะอาด",
         borrowedDate: "2021-08-23",
@@ -12,7 +13,7 @@ export default function BorrowBook_main() {
         fine: 0,
     },
     {
-        id: 'B0003',
+        id: 'B0002',
         title: "เย็บ ปัก ถักร้อย",
         borrower: "สมหญิง จริงใจ",
         borrowedDate: "2021-08-23",
@@ -20,15 +21,7 @@ export default function BorrowBook_main() {
         fine: 0,
     },
     {
-        id: 'B0001',
-        title: "คู่มือการสอบรับราชการ",
-        borrower: "สมชาย มั่นคง",
-        borrowedDate: "2021-08-22",
-        returnDate: "2021-08-26",
-        fine: 5,
-    },
-    {
-        id: 'B0001',
+        id: 'B0003',
         title: "คู่มือการสอบรับราชการ",
         borrower: "สมชาย มั่นคง",
         borrowedDate: "2021-08-21",
@@ -36,7 +29,7 @@ export default function BorrowBook_main() {
         fine: 0,
     },
     {
-        id: 'B0002',
+        id: 'B0004',
         title: "แฮร์รี่ พอตเตอร์",
         borrower: "สมเกียรติ เก่งกล้า",
         borrowedDate: "2021-08-20",
@@ -44,6 +37,7 @@ export default function BorrowBook_main() {
         fine: 25,
     },
   ];
+  
 
   return (
     <section className="bb-main">
@@ -62,9 +56,9 @@ export default function BorrowBook_main() {
           </form>
 
           <div className="button-checkinfo flex justify-end gap-2 my-2">
-            <button className="border-[1.5px] border-black px-3 font-medium rounded-md">
+          <Link to="/borrow" className="border-[1.5px] border-black px-3 font-medium rounded-md">
               ยืม-คืนหนังสือ
-            </button>
+            </Link>
             <button className="border-[1.5px] border-black px-3 font-medium rounded-md">
               ข้อมูลสถิติ
             </button>
