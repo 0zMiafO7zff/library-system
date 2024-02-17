@@ -5,7 +5,9 @@ import './index.css'
 import BorrowBook_main from './components/BorrowBook/BorrowBook_main.jsx'
 
 
+
 import { createBrowserRouter, RouterProvider, Route, Link } from "react-router-dom";
+// import BorrowBook_borrow from './components/BorrowBook/BorrowBook_borrow.jsx'
 
 
 const router = createBrowserRouter([
@@ -16,7 +18,11 @@ const router = createBrowserRouter([
   {
     path: "/borrowbook",
     element: <BorrowBook_main />
-  }
+  // },
+  // {
+  //   path: "/borrowbook_borrow",
+  //   element: <BorrowBook_borrow />
+  // }
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
